@@ -1,9 +1,11 @@
+import Hero from "../../components/ui/Hero/Hero";
+import { StyledContainer } from "./styled";
 
 function HomeScreen() {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <StyledContainer>
+      <Hero />
+    </StyledContainer>
   )
 }
 

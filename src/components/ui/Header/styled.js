@@ -1,5 +1,5 @@
 import React from "react";
-import { IconButton, ListItem, makeStyles, MenuItem } from "@material-ui/core";
+import { Collapse, IconButton, List, ListItem, makeStyles, MenuItem } from "@material-ui/core";
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { withStyles } from "@material-ui/styles";
 import MenuIcon from '@material-ui/icons/Menu';
@@ -15,7 +15,7 @@ const ElevationScroll = (props) => {
 
   return React.cloneElement(children, {
     elevation: trigger ? 4 : 0,
-    background: 'white' 
+    backgroundColor: 'white' 
   });
 }
 
@@ -76,12 +76,32 @@ const StyledMenuIcon = withStyles(theme => ({
   }
 }))(MenuIcon);
 
+const StyledList = withStyles(theme => ({
+  root: {
+    minWidth: '15rem',
+    '&:hover': {
+      backgroundColor: 'white'
+    }
+  }
+}))(List);
+
 const StyledListItem = withStyles(theme => ({
   root: {
     ...theme.typography.tabSecondary,
-    fontSize: '1.5rem'
+    fontSize: '1.5rem',
+    minWidth: '5rem',
   }
 }))(ListItem);
 
+const StyledCollapse = withStyles(theme => ({
+  root: {
+    ...theme.typography.tabSecondary,
+    fontSize: '1.5rem',
+    minWidth: '5rem'
+  }
+}))(Collapse)
 
-export {useStyles, ElevationScroll, StyledMenuItem, StyledIconButton, StyledMenuIcon, StyledListItem};
+
+
+
+export {useStyles, ElevationScroll, StyledMenuItem, StyledIconButton, StyledMenuIcon, StyledList, StyledListItem, StyledCollapse};

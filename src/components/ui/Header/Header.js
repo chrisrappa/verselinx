@@ -15,9 +15,13 @@ import {
     Tab, 
     Menu, 
     SwipeableDrawer,
-    List,
-    ListItemText
+    ListItemText,
 } from '@material-ui/core';
+
+import {
+    ExpandLess,
+    ExpandMore,
+} from '@material-ui/icons'
 
 // Styled Imports
 import { 
@@ -26,8 +30,15 @@ import {
     StyledMenuItem, 
     StyledIconButton, 
     StyledMenuIcon,
-    StyledListItem
+    StyledListItem,
+    StyledList,
+    StyledCollapse
 } from './styled';
+
+import {
+    templateMenuOptions,
+    mobileMenuOptions
+} from './menuOptions';
 
 
 // Accessibility Compliance
@@ -53,13 +64,7 @@ function Header(props) {
     const [openMenu, setOpenMenu] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(0);
 
-    // Menu Items
-    const menuOptions = [
-        {id: 1, name: "All Templates", link: '/templates'},
-        {id: 2, name: "NFT Store", link: '/nftstore'},
-        {id: 3, name: "Web 3.0 Social App", link: '/web3social'},
-        {id: 4, name: "Web 2.0 Social App", link: '/web2social'},
-    ]
+    const [mobileDropdown, setMobileDropdown] = useState(false);
 
     // Click Functions
     const handleChange = (e, value) => {
@@ -80,6 +85,10 @@ function Header(props) {
         setAnchorEl(null);
         setOpenMenu(false);
         setSelectedIndex(index);
+    }
+
+    const handleMobileDropdown = () => {
+        setMobileDropdown(!mobileDropdown);
     }
 
     // Responsible for setting "selected" style based on pathname
@@ -122,7 +131,7 @@ function Header(props) {
                     style: {
                         display: "none",
                     },
-                    }}
+                }}
             >
                 <Tab 
                     className = {classes.tab} 
@@ -159,9 +168,9 @@ function Header(props) {
                 classes = {{list: classes.dropdown}}
                 MenuListProps = {{onMouseLeave: handleClose}}
             >
-                {/* Iterate through menuOptions array */}
+                {/* Iterate through templateMenuOptions array */}
                 {
-                    menuOptions.map((option, index)=> (
+                    templateMenuOptions.map((option, index)=> (
                         <StyledMenuItem
                             key = {option.id}
                             onClick = {(e) => {
@@ -172,7 +181,6 @@ function Header(props) {
                             selected = {index === selectedIndex && value === 1 ? true : false}
                             component = {Link} 
                             to = {option.link}
-
                         >
                             {option.name}
                         </StyledMenuItem>
@@ -193,19 +201,51 @@ function Header(props) {
                 onOpen = {() => setOpenMenuDrawer(true)} 
             >
             
-            <List>
+            <StyledList>
                 {
-                    menuOptions.map((option, index)=> (
+                    mobileMenuOptions.map((option, index)=> (
                         <StyledListItem 
                             key = {option.id} 
                             component = {Link} 
                             to = {option.link}
+                            divider
+                            button
+                            onClick = {() => {setOpenMenuDrawer(false); setValue(option.id)}}
                         >
                             <ListItemText disableTypography primary = {option.name} />
                         </StyledListItem>
                     ))
                 }
-            </List>
+                <StyledListItem button onClick = {handleMobileDropdown}>
+                    <ListItemText disableTypography primary = "Templates" />
+                    {mobileDropdown ? <ExpandLess /> : <ExpandMore />}
+                </StyledListItem>
+                <StyledCollapse in={mobileDropdown} timeout="auto" unmountOnExit>
+                    <StyledList>
+                        {
+                            templateMenuOptions.map((option, index)=> (
+                                <StyledListItem
+                                    key = {option.id}
+                                    onClick = {(e) => {
+                                        handleMenuItemClick(e, index); 
+                                        setValue(1); 
+                                        handleMobileDropdown();
+                                        setOpenMenuDrawer(false);
+
+                                    }}
+                                    selected = {index === selectedIndex && value === 1 ? true : false}
+                                    component = {Link} 
+                                    to = {option.link}
+                                    className = {classes.nested}
+                                >
+                                    {option.name}
+                                </StyledListItem>
+                            ))
+                        }
+
+                    </StyledList>
+                </StyledCollapse>
+            </StyledList>
 
             </SwipeableDrawer>
             <StyledIconButton onClick = {() => setOpenMenuDrawer(!openMenuDrawer)} disableRipple>
