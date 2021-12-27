@@ -15,13 +15,17 @@ const ElevationScroll = (props) => {
 
   return React.cloneElement(children, {
     elevation: trigger ? 4 : 0,
-    backgroundColor: 'white' 
+    style:{
+      // Come back and figure out how to pass the theme in to this
+      backgroundColor: trigger ? 'rgba(73,73,73, 1)' : 'transparent',
+    }
   });
 }
 
 const useStyles = makeStyles(theme => ({
   root: {
-    background: 'transparent'
+    background: 'transparent',
+    // marginBottom: '10rem'
   },
   toolbarMargin: {
     ...theme.mixins.toolbar

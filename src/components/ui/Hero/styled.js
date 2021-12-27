@@ -20,8 +20,9 @@ const StyledHeroContainer = withStyles(theme => ({
     flexGrow: 1,
     paddingTop: '1rem',
     paddingBotton: '1rem',
+    width: '100%',
     marginTop: '1rem',
-    marginBottom: '1rem',
+    marginBottom: '1.5rem',
     background: 'white',
     borderRadius: '0.75rem',
     boxShadow: `${theme.boxShadows.inset.boxShadow}`,
@@ -38,7 +39,7 @@ const StyledHeroContainer = withStyles(theme => ({
       maxWidth: '60rem',
       paddingBottom: '0.5rem',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
     }, 
     [theme.breakpoints.up('lg')]: {
       maxWidth: '90rem',

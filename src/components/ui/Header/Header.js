@@ -258,7 +258,7 @@ function Header(props) {
         <>
             <CssBaseline />
             <ElevationScroll {...props}>
-                <AppBar className = {classes.root}>
+                <AppBar className = {classes.root} >
                     <Toolbar>
                         <Button 
                             className = { classes.logoContainer } 

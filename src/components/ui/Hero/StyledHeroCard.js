@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { 
   StyledCard,
   StyledCardActionArea,
@@ -13,17 +14,17 @@ function StyledHeroCard(props) {
     <StyledCard elevation = { 5 } >
       <StyledCardActionArea>
         <StyledCardContent>
-          <StyledTypography variant="h4" component="h2">
-            {props.title}
+          <StyledTypography variant = "h4" component = "h2">
+            {props.title ? props.title : ''}
           </StyledTypography>
-          <StyledTypography variant="p" component="p">
-            {props.description}
+          <StyledTypography variant = "p" componen t= "p">
+            {props.description ? props.description : ''}
           </StyledTypography>
-          <StyledButton size="large" color="white">
+          <StyledButton size = "large" color = "white" component = { Link } to = {props.path ? props.path : ''}>
             Learn More
           </StyledButton>
         </StyledCardContent>
-        <StyledCardMedia component={'img'} image={props.image} />
+        <StyledCardMedia component = {'img'} image = {props.image ? props.image : ''} />
       </StyledCardActionArea>
     </StyledCard>
   )

@@ -1,5 +1,6 @@
 import { unstable_createMuiStrictModeTheme as createMuiTheme} from '@material-ui/core/styles';
-
+import { Container } from "@material-ui/core";
+import { withStyles } from "@material-ui/styles";
 // Colors
 
 // Mains - Opacity
@@ -135,12 +136,38 @@ const theme = createMuiTheme({
       '@global': {
         body: {
           background: `${mainBackground}`,
-          minHeight: '100vh'
+          minHeight: '100vh',
+          marginTop: '5rem'
         },
       }
     },
+    MuiGrid: {
+      item: {
+        // width: '100%!important',
+        display: 'flex',
+        flexGrow: '1!important',
+        flexShrink: '2',
+        maxWidth: '100%!important',
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+      }
+    }
     
   }
 });
 
-export default theme;
+
+const StyledContainer = withStyles(theme => ({
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    [theme.breakpoints.up('md')]: {
+      maxWidth: '90rem',
+      paddingBottom: '1.5rem',
+    },
+  }
+}))(Container);
+
+
+export { theme, StyledContainer };
