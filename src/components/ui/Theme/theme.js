@@ -135,15 +135,25 @@ const theme = createMuiTheme({
     MuiCssBaseline: {
       '@global': {
         body: {
-          background: `${mainBackground}`,
+          background: `${mainBackground} fixed`,
+          backgroundPosition: 'bottom',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
           minHeight: '100vh',
-          marginTop: '5rem'
+          width: '100%',
+          marginTop: '3.5rem',
+          padding: '0'
+        },
+        html: {
+          minHeight: '100%'
+        },
+        '#root': {
+          minHeight: '100%'
         },
       }
     },
     MuiGrid: {
       item: {
-        // width: '100%!important',
         display: 'flex',
         flexGrow: '1!important',
         flexShrink: '2',

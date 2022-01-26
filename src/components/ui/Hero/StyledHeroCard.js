@@ -10,6 +10,7 @@ import {
 
 function StyledHeroCard(props) {
 
+  console.log('props StyledHeroCard',  props);
   return (
     <StyledCard elevation = { 5 } >
       <StyledCardActionArea>
@@ -17,12 +18,19 @@ function StyledHeroCard(props) {
           <StyledTypography variant = "h4" component = "h2">
             {props.title ? props.title : ''}
           </StyledTypography>
-          <StyledTypography variant = "p" componen t= "p">
+          <StyledTypography variant = "body1" component= "p">
             {props.description ? props.description : ''}
           </StyledTypography>
-          <StyledButton size = "large" color = "white" component = { Link } to = {props.path ? props.path : ''}>
-            Learn More
-          </StyledButton>
+          {props.to && props.isActive
+          
+            ? 
+              <StyledButton size = "large" color = "inherit" component = { Link } to = {props.to}>
+                Learn More
+              </StyledButton>
+            :
+              <StyledTypography>Coming Soon</StyledTypography>
+              
+          }
         </StyledCardContent>
         <StyledCardMedia component = {'img'} image = {props.image ? props.image : ''} />
       </StyledCardActionArea>

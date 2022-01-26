@@ -25,7 +25,6 @@ const ElevationScroll = (props) => {
 const useStyles = makeStyles(theme => ({
   root: {
     background: 'transparent',
-    // marginBottom: '10rem'
   },
   toolbarMargin: {
     ...theme.mixins.toolbar
@@ -104,8 +103,5 @@ const StyledCollapse = withStyles(theme => ({
     minWidth: '5rem'
   }
 }))(Collapse)
-
-
-
 
 export {useStyles, ElevationScroll, StyledMenuItem, StyledIconButton, StyledMenuIcon, StyledList, StyledListItem, StyledCollapse};

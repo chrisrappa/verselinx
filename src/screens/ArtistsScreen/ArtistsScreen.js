@@ -1,9 +1,14 @@
 import  CategoryPage  from "../../components/ui/CategoryPage/CategoryPage";
-import { cardOptions } from "./cardOptions"
+import { heroInfo, optionOne, optionTwo, optionThree } from "./categoryOptions"
 
 function ArtistsScreen() {
   return (
-    <CategoryPage cardOptions = {cardOptions} />
+    <CategoryPage 
+      cardOptions = {heroInfo} 
+      optionOne = {optionOne}
+      optionTwo = {optionTwo}
+      optionThree = {optionThree}
+    />
   )
 }
 

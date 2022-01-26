@@ -157,6 +157,10 @@ function Header(props) {
                     label = "Support" 
                     {...a11yProps(3)} 
                 />
+                
+                {/* Google Translate */}
+                {/* <div id="google_translate_element" /> */}
+
             </Tabs>
 
             {/* Dropdown Menu */}
@@ -222,8 +226,8 @@ function Header(props) {
                 </StyledListItem>
                 <StyledCollapse in={mobileDropdown} timeout="auto" unmountOnExit>
                     <StyledList>
-                        {
-                            templateMenuOptions.map((option, index)=> (
+                        {   
+                            templateMenuOptions.map((option, index) => (
                                 <StyledListItem
                                     key = {option.id}
                                     onClick = {(e) => {
@@ -241,6 +245,7 @@ function Header(props) {
                                     {option.name}
                                 </StyledListItem>
                             ))
+                            
                         }
 
                     </StyledList>
@@ -267,11 +272,12 @@ function Header(props) {
                             onClick = {() => setValue(0)}
                             disableRipple
                         >
+
                             <Typography variant = "h6">
                                 verseLinx
                             </Typography>   
+                            
                         </Button>
-
                         { matches ? tabs : drawer}
                         
                     </Toolbar>
