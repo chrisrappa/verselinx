@@ -1,4 +1,4 @@
-import { Card, CardContent, Grid, Typography } from "@material-ui/core";
+import { Card, CardContent, Grid, Paper, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 
 const CategoryGrid = withStyles(theme => ({
@@ -62,10 +62,11 @@ const FullWidthCard = withStyles (theme => ({
     marginTop: '0.5rem',
     marginBottom: '1.5rem',
     maxHeight: '20rem',
-    // minHeight: '50%',
+    minHeight: '20rem',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: `${theme.palette.grays.mdFull}`, 
     borderRadius: '0.5rem',
     [theme.breakpoints.down('md')]: {
       width: '60rem',
@@ -83,21 +84,17 @@ const FullWidthCard = withStyles (theme => ({
 const CategoryCardTitle = withStyles((theme) => ({
   root: {
     position: 'absolute', 
-    zIndex: '10',
+    zIndex: '5',
     display: 'flex',
     justifyContent: 'center', 
     alignItems: 'center', 
     flexDirection: 'column',
-    // backgroundColor: `${theme.palette.grays.mdFull}`, 
+    backgroundColor: `${theme.palette.grays.mdFull}`, 
     background: 'none',
     width: '100%', 
     height: '100%', 
     padding: '0!important',
-    '&:hover': {
-      transition: 'all .22s ease-in-out',
-      transform: 'scale(2)',
-      opacity: '0',
-    },
+    // transition: 'all .22s ease-in-out',
   }
 }))(CardContent);
 
@@ -117,19 +114,42 @@ const CategoryTypography = withStyles((theme) => ({
 
 const CategoryCardContent = withStyles((theme) => ({
   root: {
-    zIndex: '5',
+    zIndex: '10',
     display: 'flex',
     justifyContent: 'center', 
     alignItems: 'center', 
-    flexDirection: 'column',
-    backgroundColor: 'transparent', 
-    background: 'none',
+    flex: '1 1 0px',
     width: '100%', 
     height: '100%', 
-    padding: '0!important',
+    background: `${theme.palette.content.secondary}`,
     backgroundColor: `${theme.palette.grays.full}`,
-    transition: 'all .22s ease-in-out'
+    transition: 'all .22s ease-in-out',
+    padding: '2rem',
+    opacity: '0',
+    '&:hover': {
+      transform: 'scale(1.045)',
+      opacity: '100',
+    },
   }
 }))(CardContent);
 
-export { CategoryGrid, CategorySubGrid, HalfWidthCard, FullWidthCard, CategoryCardTitle, CategoryCardContent, CategoryTypography }
+const CategoryPaper = withStyles((theme) => ({
+  root: {
+    // flex: '1',
+    backgroundColor: 'transparent', 
+    height: '100%', 
+    width: '100%',
+    overflow: 'auto',
+  }
+}))(Paper);
+
+export { 
+  CategoryGrid, 
+  CategorySubGrid, 
+  HalfWidthCard, 
+  FullWidthCard, 
+  CategoryCardTitle, 
+  CategoryCardContent,
+  CategoryTypography,
+  CategoryPaper
+ }

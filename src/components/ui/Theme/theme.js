@@ -31,6 +31,12 @@ const white300 = 'rgba(255, 255, 255, 0.5)';
 const white400 = 'rgba(255, 255, 255, 0.75)';
 const white500 = 'rgba(255, 255, 255, 1)';
 
+// Content Container Colors
+const contentPrimary = '';
+const contentSecondary = `linear-gradient(172deg, ${gray300} 45%, ${secondary200} 100%);`;
+// `linear-gradient(172deg, ${gray500} 100%, ${secondaryFull} 100%)`;
+
+
 // Buttons
 
 const buttonPrimary = `${secondaryFull}`;
@@ -56,7 +62,7 @@ const theme = createMuiTheme({
   palette: {
     common: {
       purple: `${primaryFull}`,
-      blue: `${secondaryFull}`
+      blue: `${secondaryFull}`,
     },
     primary : {
       veryLight: `${primary100}`,
@@ -71,6 +77,9 @@ const theme = createMuiTheme({
       md: `${secondary300}`,
       mdFull: `${secondary400}`,
       main: `${secondaryFull}`
+    },
+    content: {
+      secondary: `${contentSecondary}`
     },
     grays: {
       veryLight: `${gray100}`,
@@ -150,6 +159,20 @@ const theme = createMuiTheme({
         '#root': {
           minHeight: '100%'
         },
+
+        // revisit this to use more dynamic props if deemed appropriate
+        '*::-webkit-scrollbar': {
+          width: '0.2rem'
+        },
+        '*::-webkit-scrollbar-track': {
+          '-webkit-box-shadow': 'inset 0 0 6px rgba(0,0,0,0.00)'
+        },
+        '*::-webkit-scrollbar-thumb': {
+          backgroundColor: `${secondary400}`,
+          outline: '1px solid slategrey',
+          borderRadius: '1rem',
+          // height: '75%'
+        }
       }
     },
     MuiGrid: {

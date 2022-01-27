@@ -89,7 +89,9 @@ const StyledCardMedia = withStyles(theme => ({
     position: 'relative',
     zIndex: '0',
     height: '100%', 
+    minWidth: '0',
     padding: '0',
+    borderRadius: '0.5rem',
   }
 }))(CardMedia);
 
@@ -101,7 +103,8 @@ const StyledGridContainer = withStyles(theme => ({
 
 const StyledCardActionArea = withStyles(theme => ({
   root: {
-    height: '100%'
+    height: '100%',
+    backgroundColor: 'transparent'
   }
 }))(CardActionArea);
 
@@ -110,7 +113,9 @@ const StyledTypography = withStyles(theme => ({
     ...theme.typography.primary,
     fontWeight: 400,
     paddingRight: '1rem',
-    paddingLeft: '1rem'
+    paddingLeft: '1rem',
+    maxHeight: '100%',
+    // overflow: 'hidden'
   }
 }))(Typography);
 

@@ -5,13 +5,15 @@ import {
   CategorySubGrid, 
   FullWidthCard, 
   HalfWidthCard,
-  CategoryTypography
+  CategoryTypography,
+  CategoryPaper
 } from "./styled"
 import { StyledContainer } from "../Theme/theme";
 import { useParams } from 'react-router-dom';
 import { StyledCardMedia, StyledTypography } from "../Hero/styled";
 import { useSelector } from "react-redux";
 import { useState } from "react";
+import { Paper } from "@material-ui/core";
 
 function CategoryPage() {
 
@@ -34,14 +36,14 @@ function CategoryPage() {
         {/* Full Width Hero (Card One) */}
         <CategorySubGrid container>
             <FullWidthCard>
-              <CategoryCardTitle>
-                <StyledTypography 
+              {/* <CategoryCardTitle> */}
+                <CategoryTypography 
                   variant = "h4" 
                   component = "h4"
                 >
                   {paramProps?.categoryPage?.heroInfo[0]?.name}
-                </StyledTypography>
-              </CategoryCardTitle>
+                </CategoryTypography>
+              {/* </CategoryCardTitle> */}
               <StyledCardMedia 
                 component = {'img'} 
                 image = {paramProps?.categoryPage?.demoInfo?.img} 
@@ -69,12 +71,18 @@ function CategoryPage() {
 
             {/* Hidden Content Except onHover/onClick */}
             <CategoryCardContent>
-              <StyledTypography 
-                variant = "h5" 
-                component = "h5"
-              >
-                {paramProps?.categoryPage?.featureTwo?.description}
-              </StyledTypography>
+              <StyledCardMedia 
+                component = {'img'} 
+                image = {paramProps?.categoryPage?.featureOne?.img} 
+              />
+              <CategoryPaper elevation={0}>
+                <StyledTypography 
+                  variant = "h5" 
+                  component = "h5"
+                >
+                  {paramProps?.categoryPage?.featureTwo?.description}
+                </StyledTypography>
+              </CategoryPaper>
             </CategoryCardContent>
           </HalfWidthCard>
 
@@ -96,12 +104,20 @@ function CategoryPage() {
             
             {/* Hidden Content Except onHover/onClick */}
             <CategoryCardContent>
-              <StyledTypography 
-                variant = "h5" 
-                component = "h5"
-              >
-                {paramProps?.categoryPage?.featureTwo?.description}
-              </StyledTypography>
+              <StyledCardMedia 
+                component = {'img'} 
+                image = {paramProps?.categoryPage?.featureOne?.img} 
+              />
+              <CategoryPaper elevation={0}>
+                <StyledTypography 
+                  variant = "h5" 
+                  component = "h5"
+                  scroll="body"
+                >
+                  {paramProps?.categoryPage?.featureTwo?.description}
+                </StyledTypography>
+              </CategoryPaper>
+
             </CategoryCardContent>
           </HalfWidthCard>
 
@@ -110,7 +126,7 @@ function CategoryPage() {
         {/* Full width CategoryGrid item (Card 4) */}
         <CategorySubGrid container>
             <FullWidthCard>
-              <CategoryCardTitle>
+              {/* <CategoryCardTitle>
                 <StyledTypography 
                   variant = "h4" 
                   component = "h4"
@@ -121,7 +137,7 @@ function CategoryPage() {
               <StyledCardMedia 
                 component = {'img'} 
                 image = {paramProps?.categoryPage?.demoInfo?.img} 
-              />
+              /> */}
             </FullWidthCard>
         </CategorySubGrid>
       </CategoryGrid>
