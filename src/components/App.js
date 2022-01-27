@@ -15,7 +15,7 @@ import { useDispatch } from 'react-redux';
 import { setPageProps } from '../actions/pageProps';
 import { data } from '../data/infoProps/heroCardOptions';
 import { ThemeProvider } from '@material-ui/styles';
-import { CssBaseline } from '@material-ui/core';
+import { CssBaseline, Fade } from '@material-ui/core';
 import { theme } from '../components/ui/Theme/theme';
 
 

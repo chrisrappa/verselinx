@@ -1,4 +1,4 @@
-import { Card, CardContent, Grid, Paper, Typography } from "@material-ui/core";
+import { Button, Card, CardContent, Grid, Paper, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
 
 const CategoryGrid = withStyles(theme => ({
@@ -105,6 +105,7 @@ const CategoryTypography = withStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: 'column',
     width: '100%',
     height: '100%',
     color: `${theme.palette.whites.full}`,
@@ -123,25 +124,28 @@ const CategoryCardContent = withStyles((theme) => ({
     height: '100%', 
     background: `${theme.palette.content.secondary}`,
     backgroundColor: `${theme.palette.grays.full}`,
-    transition: 'all .22s ease-in-out',
     padding: '2rem',
     opacity: '0',
-    '&:hover': {
-      transform: 'scale(1.045)',
-      opacity: '100',
-    },
   }
 }))(CardContent);
 
 const CategoryPaper = withStyles((theme) => ({
   root: {
-    // flex: '1',
     backgroundColor: 'transparent', 
     height: '100%', 
     width: '100%',
     overflow: 'auto',
   }
 }))(Paper);
+
+const CategoryButton = withStyles ((theme) => ({
+  root: {
+    display: 'block', 
+    color: `${theme.palette.whites.full}`,
+    backgroundColor: `${theme.palette.whites.veryLight}`,
+    marginTop: '2rem',
+  }
+}))(Button);
 
 export { 
   CategoryGrid, 
@@ -151,5 +155,6 @@ export {
   CategoryCardTitle, 
   CategoryCardContent,
   CategoryTypography,
-  CategoryPaper
+  CategoryPaper,
+  CategoryButton
  }
