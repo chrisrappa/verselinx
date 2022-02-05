@@ -32,7 +32,8 @@ const white400 = 'rgba(255, 255, 255, 0.75)';
 const white500 = 'rgba(255, 255, 255, 1)';
 
 // Content Container Colors
-const contentPrimary = '';
+
+// const contentPrimary = '';
 const contentSecondary = `linear-gradient(172deg, ${gray300} 45%, ${secondary200} 100%);`;
 // `linear-gradient(172deg, ${gray500} 100%, ${secondaryFull} 100%)`;
 

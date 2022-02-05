@@ -38,7 +38,7 @@ cardOptions: [
           id: 3,
           name: 'Demo',
           img: 'https://res.cloudinary.com/djrbfvpit/image/upload/v1640114381/verselinx/artists/cardbackdrop_cgg2kx.jpg',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue facilisis egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent facilisis felis in diam ullamcorper, elementum vulputate est molestie. Proin ultricies lacinia posuere. ',
+          description: 'Interactive Demo Coming Soon!',
           path: '/3dDemo'
         }
       }

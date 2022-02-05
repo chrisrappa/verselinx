@@ -15,7 +15,7 @@ import { useDispatch } from 'react-redux';
 import { setPageProps } from '../actions/pageProps';
 import { data } from '../data/infoProps/heroCardOptions';
 import { ThemeProvider } from '@material-ui/styles';
-import { CssBaseline, Fade } from '@material-ui/core';
+import { CssBaseline } from '@material-ui/core';
 import { theme } from '../components/ui/Theme/theme';
 
 
@@ -35,7 +35,7 @@ function App() {
         <Routes>
           <Route exact path = '/' element = {<HomeScreen />} />
           <Route exact path = '/pricing' element = {<PricingScreen />} />
-          <Route exact path = '/templates' element = {<MainTemplatesScreen />} />
+          <Route path = '/templates/:id' element = {<MainTemplatesScreen />} />
           <Route exact path = '/support' element = {<SupportScreen />} />
           <Route exact path = '/category/:categoryType' element = {<CategoryPage />} />
         </Routes>

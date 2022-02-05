@@ -11,10 +11,10 @@ import {
 } from "./styled"
 import { StyledContainer } from "../Theme/theme";
 import { useParams } from 'react-router-dom';
-import { StyledCardMedia, StyledTypography } from "../Hero/styled";
+import { StyledCardMedia, StyledHeroContainer, StyledTypography } from "../Hero/styled";
 import { useSelector } from "react-redux";
 import { useState } from "react";
-import { Fade, Paper } from "@material-ui/core";
+import { Fade } from "@material-ui/core";
 
 function CategoryPage() {
 
@@ -153,23 +153,10 @@ function CategoryPage() {
 
           </CategorySubGrid>
 
-          {/* Full width CategoryGrid item (Card 4) */}
-          <CategorySubGrid container>
-              <FullWidthCard>
-                {/* <CategoryCardTitle>
-                  <StyledTypography 
-                    variant = "h4" 
-                    component = "h4"
-                  >
-                    {paramProps?.categoryPage?.demoInfo?.name}
-                  </StyledTypography>
-                </CategoryCardTitle>
-                <StyledCardMedia 
-                  component = {'img'} 
-                  image = {paramProps?.categoryPage?.demoInfo?.img} 
-                /> */}
-              </FullWidthCard>
-          </CategorySubGrid>
+          {/* Full width template demo */}
+          <StyledHeroContainer>
+            <h1>{paramProps?.categoryPage?.demoInfo?.description}</h1>
+          </StyledHeroContainer>
         </CategoryGrid>
       </StyledContainer>
     </Fade>

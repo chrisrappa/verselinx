@@ -101,15 +101,15 @@ function Header(props) {
                 setValue(1)
                 setSelectedIndex(0)
                 break;
-            case '/nftstore':
+            case '/templates/nftstore':
                 setValue(1)
                 setSelectedIndex(1)
                 break;
-            case '/web3social':
+            case '/templates/web3social':
                 setValue(1)
                 setSelectedIndex(2)
                 break;
-            case '/web2social':
+            case '/templates/web2social':
                 setValue(1)
                 setSelectedIndex(3)
                 break;
@@ -145,7 +145,7 @@ function Header(props) {
                     aria-haspopup = {anchorEl ? true : undefined}
                     className = {classes.tab} 
                     component = { Link } 
-                    to = '/templates'
+                    to = '/templates/:id'
                     label = "Templates" 
                     onMouseOver = {e => handleClick(e)}
                     {...a11yProps(1)} 
