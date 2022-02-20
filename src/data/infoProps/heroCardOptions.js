@@ -6,7 +6,7 @@ cardOptions: [
       id: 0, 
       name: '2D & 3D NFT Store', 
       img: 'https://res.cloudinary.com/djrbfvpit/image/upload/v1640114381/verselinx/artists/cardbackdrop_cgg2kx.jpg',
-      description: 'Create your own custom branded storefront for your NFT art, either in 2D picture and movie form or 3D models.',
+      description: 'Create your own custom branded store front for your NFT art, either in 2D pictures or 3D models.',
       categoryType: 'art-store',
       path: '/art-store',
       isActive: true,

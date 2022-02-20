@@ -21,7 +21,7 @@ import {
 import {
     ExpandLess,
     ExpandMore,
-} from '@material-ui/icons'
+} from '@material-ui/icons';
 
 // Styled Imports
 import { 
@@ -65,6 +65,69 @@ function Header(props) {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     const [mobileDropdown, setMobileDropdown] = useState(false);
+
+    // const readCookie = (name) => {
+    //     let i;
+    //     var c = document.cookie.split('; ');
+    //     cookies = {}, i, c;
+
+    //     for (i = c.length - 1; i >= 0; i--) {
+    //         C = c[i].split('=');
+    //         cookies[C[0]] = C[1];
+    //      }
+    
+    //      return cookies[name]; 
+    // }
+
+    // const getCookie = (cname) => {
+    //     let name = cname + "=";
+    //     let decodedCookie = decodeURIComponent(document.cookie);
+    //     let ca = decodedCookie.split(';');
+    //     for(let i = 0; i <ca.length; i++) {
+    //         let c = ca[i];
+    //         while (c.charAt(0) === ' ') {
+    //         c = c.substring(1);
+    //         }
+    //         if (c.indexOf(name) === 0) {
+    //         return c.substring(name.length, c.length);
+    //         }
+    //     }
+     
+    //     return "";
+    // }
+
+    // var googleTransCookie = getCookie('googtrans');
+
+    // const setCookie = (cname) => {
+    //     document.cookie = cname;
+        
+    // }
+    // Finds out if select dropdown was changed and set googleTransCookie
+    // const seeChange = document.getElementsByClassName('goog-te-combo')[0];
+    
+    // if(document.getElementById('google_translate_element')){
+    //     seeChange.onchange = () => {
+    //         var currentLang = getCookie('googtrans');
+    //         googleTransCookie = currentLang;
+    //         console.log(googleTransCookie);
+    //     }
+    // }
+
+
+
+    // = function() {
+    //     var index = this.selectedIndex;
+    //     var inputText = this.children[index].innerHTML.trim();
+    //     // const cookie = getCookie('googtrans');
+    //     // console.log('getCookie', cookie);
+    //     console.log(inputText);
+    // }
+
+    
+    
+
+    // console.log(getCookie('googtrans'))
+
 
     // Click Functions
     const handleChange = (e, value) => {
