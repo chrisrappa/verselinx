@@ -1,0 +1,3 @@
+[submodule "verselinx"]
+	path = verselinx
+	url = https://github.com/chrisrappa/verselinx.git
