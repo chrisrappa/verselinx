@@ -1,0 +1,33 @@
+#google_translate_element{
+  margin-left: 2rem;
+  margin-top: 0.75rem;
+}
+
+#google_translate_element select{
+  background-color:#c189eb8e;
+  color:#080914;
+  border: none;
+  border-radius:3px;
+  padding:6px 8px;
+}
+
+.goog-logo-link{
+  display: none !important;
+
+}
+
+.goog-te-gadget{
+  color: transparent !important;
+}
+
+.goog-te-banner-frame{
+  display: none !important;
+}
+
+#google_translate_element select::-webkit-scrollbar{
+  width: 3rem;
+}
+
+#root {
+  height: 100%;
+}
