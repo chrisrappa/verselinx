@@ -1,7 +1,8 @@
-import { Tab, Tabs, Container } from "@material-ui/core";
+import { Tabs, Container } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import { StyledHeroContainer } from "../../../components/ui/Hero/styled";
 import { useParams } from "react-router-dom";
+import { StyledTab } from "./styled";
 
 function MainTemplatesScreen() {
 
@@ -40,10 +41,10 @@ function MainTemplatesScreen() {
         onChange={handleChange}
         aria-label="template options"
       >
-        <Tab value='nftstore' label="2D/3D NFTs" />
-        <Tab value='musicNFT' label="Music NFTs" />
-        <Tab value='web3social' label="Social 3.0" />
-        <Tab value='web2social' label="Social 2.0" />
+        <StyledTab value='nftstore' label="2D/3D NFTs" />
+        <StyledTab value='musicNFT' label="Music NFTs" />
+        <StyledTab value='web3social' label="Social 3.0" />
+        <StyledTab value='web2social' label="Social 2.0" />
       </Tabs>
       <StyledHeroContainer style={{textAlign: 'center'}}>
         {currentTemplate(value)}
