@@ -48,12 +48,12 @@ function CategoryPage() {
                     variant = "h4" 
                     component = "h4"
                   >
-                    {paramProps?.categoryPage?.heroInfo[0]?.name}
+                    {paramProps?.categoryPage?.heroInfo?.name}
                   </CategoryTypography>
                 {/* </CategoryCardTitle> */}
                 <StyledCardMedia 
                   component = {'img'} 
-                  image = {paramProps?.categoryPage?.demoInfo?.img} 
+                  image = {paramProps?.categoryPage?.heroInfo?.img} 
                 />
               </FullWidthCard>
           </CategorySubGrid>
@@ -97,7 +97,7 @@ function CategoryPage() {
                       variant = "h5" 
                       component = "h5"
                     >
-                      {paramProps?.categoryPage?.featureTwo?.description}
+                      {paramProps?.categoryPage?.featureOne?.description}
                     </StyledTypography>
                   </CategoryPaper>
                 </CategoryCardContent>
@@ -135,7 +135,7 @@ function CategoryPage() {
                 <CategoryCardContent>
                   <StyledCardMedia 
                     component = {'img'} 
-                    image = {paramProps?.categoryPage?.featureOne?.img} 
+                    image = {paramProps?.categoryPage?.featureTwo?.img} 
                   />
                   <CategoryPaper elevation={0}>
                     <StyledTypography 

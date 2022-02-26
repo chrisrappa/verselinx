@@ -22,7 +22,7 @@ const secondaryFull = 'rgba(177, 194, 250, 1)';
 const gray100 = 'rgba(73,73,73, 0.1)';
 const gray200 = 'rgba(73,73,73, 0.25)';
 const gray300 = 'rgba(73,73,73, 0.5)';
-const gray400 = 'rgba(73,73,73, 0.90)';
+const gray400 = 'rgba(73,73,73, 0.95)';
 const gray500 = 'rgba(73,73,73, 1)';
 
 const white100 = 'rgba(255, 255, 255, 0.1)';
