@@ -63,7 +63,7 @@ function CategoryPage() {
 
             {/* Card Two */}
             <HalfWidthCard>
-              <CategoryCardTitle>
+              <CategoryCardTitle onMouseEnter={() => setCardTwoVisible(true)}>
                 <CategoryTypography 
                   variant = "h4" 
                   component = "h4"
@@ -74,7 +74,7 @@ function CategoryPage() {
                     variant="contained" 
                     size="large"
                     color="secondary"
-                    onClick={() => setCardTwoVisible(true)}
+                    onClick={() => setCardTwoVisible(!cardTwoVisible)}
                   >
                     See More
                   </CategoryButton>
@@ -87,7 +87,7 @@ function CategoryPage() {
 
               {/* Hidden Content Except onHover/onClick */}
               <Fade in={cardTwoVisible} timeout={1000}>
-                <CategoryCardContent>
+                <CategoryCardContent onMouseLeave = {() => setCardTwoVisible(false)}>
                   <StyledCardMedia 
                     component = {'img'} 
                     image = {paramProps?.categoryPage?.featureOne?.img} 
@@ -106,7 +106,7 @@ function CategoryPage() {
 
             {/* Card Three */}
             <HalfWidthCard>
-              <CategoryCardTitle>
+              <CategoryCardTitle onMouseEnter={() => setCardThreeVisible(true)}>
                 <CategoryTypography 
                   variant = "h4" 
                   component = "h4"
@@ -132,7 +132,7 @@ function CategoryPage() {
               
               {/* Hidden Content Except onHover/onClick */}
               <Fade in={cardThreeVisible} timeout={1000}>
-                <CategoryCardContent>
+                <CategoryCardContent onMouseLeave = {() => setCardThreeVisible(false)}>
                   <StyledCardMedia 
                     component = {'img'} 
                     image = {paramProps?.categoryPage?.featureTwo?.img} 
