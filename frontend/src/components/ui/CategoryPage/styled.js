@@ -94,6 +94,7 @@ const CategoryCardTitle = withStyles((theme) => ({
     width: '100%', 
     height: '100%', 
     padding: '0!important',
+    textAlign: 'center'
     // transition: 'all .22s ease-in-out',
   }
 }))(CardContent);
