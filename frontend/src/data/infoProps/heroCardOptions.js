@@ -5,7 +5,7 @@ cardOptions: [
     {
       id: 0, 
       name: '2D & 3D NFT Store', 
-      img: 'https://res.cloudinary.com/djrbfvpit/image/upload/v1640114381/verselinx/artists/cardbackdrop_cgg2kx.jpg',
+      img: 'https://res.cloudinary.com/djrbfvpit/image/upload/v1645920392/verselinx/NFTStoreCategory_mq5yjz.jpg',
       description: 'Create your own custom branded store front for your NFT art, either in 2D pictures or 3D models.',
       categoryType: 'art-store',
       path: '/art-store',
@@ -14,20 +14,20 @@ cardOptions: [
         heroInfo: {
           id: 0, 
           name: '2D & 3D NFT Store', 
-          img: 'https://res.cloudinary.com/djrbfvpit/image/upload/v1645900555/verselinx/NFTStore/nftbanner2_yniwwt.jpg',
+          img: 'https://res.cloudinary.com/djrbfvpit/image/upload/v1645920383/verselinx/NFTStore/NFTStoreBanner_kuc61j.jpg',
           description: 'Create your own custom branded storefront for your NFT art including photos, 3d models, music, etc.',
         },
         featureOne: {
           id: 1,
           name: '2D Art',
-          img: 'https://res.cloudinary.com/djrbfvpit/image/upload/v1645901139/verselinx/NFTStore/2dnft2_f5pbyl.jpg',
+          img: 'https://res.cloudinary.com/djrbfvpit/image/upload/v1645920374/verselinx/NFTStore/davidnft_itdf9q.jpg',
           description: 'Have your own custom branded storefront for selling your incredible 2D NFT art. With minting built in to your site you can upload, mint, and sell right away to those who love your work. All while keeping your brand front and center',
           path: '/musicDemo'
         },
         featureTwo: {
           id: 2,
           name: '3D Models / Game Objects',
-          img: 'https://res.cloudinary.com/djrbfvpit/image/upload/v1645901157/verselinx/NFTStore/3dnftasset2_brnfgd.jpg',
+          img: 'https://res.cloudinary.com/djrbfvpit/image/upload/v1645920372/verselinx/NFTStore/3dNFTChest_b0cae4.jpg',
           description: 'Building a game or created 3D objects you would like to sell as NFTs? Have a storefront just for you so that you can supply players with usable assets from your own site. Or sell your 3D artwork created for viewing on screen or even viewing in virtual and augmented reality.',
           path: '/pictureDemo'
         },
@@ -43,7 +43,7 @@ cardOptions: [
     {
       id: 1, 
       name: 'Music NFT Platform', 
-      img: 'https://res.cloudinary.com/djrbfvpit/image/upload/v1640114392/verselinx/entertainers/cardbackdrop_ey9tyo.jpg',
+      img: 'https://res.cloudinary.com/djrbfvpit/image/upload/v1645920423/verselinx/NFTMusicCategory_xeuqin.jpg',
       description: 'Start your own music streaming platform that allows you to sell your tracks as NFTs',
       categoryType: 'music-store',
       path: '/music-store',
@@ -84,7 +84,7 @@ cardOptions: [
     {
       id: 2, 
       name: 'Web 3.0 Social', 
-      img: 'https://res.cloudinary.com/djrbfvpit/image/upload/v1640114364/verselinx/communities/cardbackdrop_gthkca.jpg',
+      img: 'https://res.cloudinary.com/djrbfvpit/image/upload/v1645920452/verselinx/Web3SocialCategory_ffp9rr.jpg',
       description: 'Have your own branded optimized live feed application based on Web 3.0 features and security',
       categoryType: 'social-app',
       path: '/social-app',
