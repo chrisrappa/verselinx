@@ -40,7 +40,8 @@ function MainTemplatesScreen() {
         indicatorColor="secondary"
         onChange={handleChange}
         aria-label="template options"
-        scrollButtons={true}
+        variant="scrollable"
+        scrollButtons='on'
         allowScrollButtonsMobile
       >
         <StyledTab value='nftstore' label="2D/3D NFTs" />
