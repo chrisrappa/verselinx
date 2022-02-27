@@ -54,6 +54,7 @@ function CategoryPage() {
                 <StyledCardMedia 
                   component = {'img'} 
                   image = {paramProps?.categoryPage?.heroInfo?.img} 
+                  style={{minHeight: '20rem', minWidth: '20rem'}}
                 />
               </FullWidthCard>
           </CategorySubGrid>

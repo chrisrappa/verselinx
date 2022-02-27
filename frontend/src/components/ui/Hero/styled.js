@@ -92,6 +92,10 @@ const StyledCardMedia = withStyles(theme => ({
     minWidth: '0',
     padding: '0',
     borderRadius: '0.5rem',
+    objectFit: 'cover'
+  },
+  img: {
+    objectFit: 'cover'
   }
 }))(CardMedia);
 

@@ -199,6 +199,7 @@ const StyledContainer = withStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       maxWidth: '90rem',
       paddingBottom: '1.5rem',
+      minHeight: '80vh'
     },
   }
 }))(Container);
